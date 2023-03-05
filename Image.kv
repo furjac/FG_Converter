@@ -1,0 +1,35 @@
+<ImageConvertor>:
+    name: "Image"
+    MDFloatLayout:
+        MDIconButton:
+            
+            icon:"chevron-left-circle-outline"
+            pos_hint: {"center_x": .05, "center_y": .9}
+            icon_size: "64sp"
+            theme_icon_color: "Custom"
+            icon_color: app.theme_cls.primary_color
+            on_release: app.change("main_screen")
+
+        MDRaisedButton:
+            text: "Enter the path"
+            pos_hint: {"center_x": .5, "center_y": .7}
+            on_release: root.file_chooser()
+
+        MDLabel:
+            text: "Below specify what type u wanna conver the file to"
+            pos_hint: {"center_x": .5, "center_y": .555}
+            halign: "center"
+
+        MDTextField:
+            id:pic_format
+            hint_text: "Enter the file format"
+            helper_text: "Enter the file format dont want a ."
+            helper_text_mode: "on_focus"
+            multiline: False
+            pos_hint: {"center_x": .5, "center_y": .3}
+
+
+        MDRaisedButton:
+            text: "Convert"
+            pos_hint: {"center_x": .5, "center_y": .155}
+            on_release: root.check_file()

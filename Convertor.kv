@@ -1,0 +1,47 @@
+<ConvertorMain>:
+    name: "main_screen"
+    MDFloatLayout:
+
+        MDLabel:
+            text: "Convert audio files"
+            pos_hint: {"center_x": .5, "center_y": .9}
+            halign: "center"
+
+        MDIconButton:
+    
+            # name of mdicon
+            icon:"file-music-outline"                          
+            pos_hint: {"center_x": .5, "center_y": .8}
+            icon_size: "64sp"
+            theme_icon_color: "Custom"
+            icon_color: app.theme_cls.primary_color
+            on_release: app.change("Audio")
+            
+
+        MDLabel:
+            text: "Convert video files"
+            pos_hint: {"center_x": .5, "center_y": .6}
+            halign: "center"
+
+        MDIconButton:
+            
+            icon:"file-video-outline"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            icon_size: "64sp"
+            theme_icon_color: "Custom"
+            icon_color: app.theme_cls.primary_color
+            on_release: app.change("Video")
+
+        MDLabel:
+            text: "Convert image files"
+            pos_hint: {"center_x": .5, "center_y": .3}
+            halign: "center"
+
+        MDIconButton:
+            
+            icon:"file-image-outline"
+            pos_hint: {"center_x": .5, "center_y": .2}
+            icon_size: "64sp"
+            theme_icon_color: "Custom"
+            icon_color: app.theme_cls.primary_color
+            on_release: app.change("Image")
